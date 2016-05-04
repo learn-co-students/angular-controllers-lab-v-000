@@ -10,10 +10,10 @@
 
     <div ng-app="app">
         <div ng-controller="ContactController">
-            Hello, {{ name }}!
+            Hello, {{ this.name }}!
 
             <div ng-controller="StaffController">
-                Also hello to {{ name }}, best friends with {{ name }}!
+                Also hello to {{ this.name }}, best friends with {{ ContactController.name }}!
             </div>
         </div>
     </div>
