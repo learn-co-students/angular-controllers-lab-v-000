@@ -1,8 +1,9 @@
-function ContactController($scope) {
-    $scope.name = 'Bill Gates';
-    $scope.email = 'william@microsoft.com'
+function ContactController() {
+  var contact = this;
+  contact.name = 'Bill Gates';
+  contact.email = 'william@microsoft.com'
 }
 
 angular
-    .module('app')
-    .controller('ContactController', ContactController);
+  .module('app')
+  .controller('ContactController', ContactController);
