@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="app">
 <head>
     <meta charset="utf-8">
 
@@ -8,20 +8,17 @@
 </head>
 <body>
 
-    <div ng-app="app">
-        <div ng-controller="ContactController as contact">
-            Hello, {{ contact.name }}!
+  <div ng-controller="ContactController as contact">
+      Hello, {{ contact.name }}!
+      <div ng-controller="StaffController as staff">
+          Also hello to {{ staff.name }}, best friends with {{ contact.name }}!
+      </div>
+  </div>
 
-            <div ng-controller="StaffController as staff">
-                Also hello to {{ staff.name }}, best friends with {{ contact.name }}!
-            </div>
-        </div>
-    </div>
-
-    <script src="js/angular.js"></script>
-    <script src="js/app/app.js"></script>
-    <script src="js/app/controllers/ContactController.js"></script>
-    <script src="js/app/controllers/StaffController.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/app/app.js"></script>
+  <script src="js/app/controllers/ContactController.js"></script>
+  <script src="js/app/controllers/StaffController.js"></script>
 
 </body>
 </html>

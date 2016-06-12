@@ -1,8 +1,9 @@
 function ContactController() {
-    this.name = 'Bill Gates';
-    this.email = 'william@microsoft.com'
+  var contact = this;
+  contact.name = 'Bill Gates';
+  contact.email = 'william@microsoft.com'
 }
 
 angular
-    .module('app')
-    .controller('ContactController', ContactController);
+  .module('app')
+  .controller('ContactController', ContactController);
