@@ -8,18 +8,24 @@ describe('ContactController', function () {
 	}));
 
 
-	it('should not be using $scope to set values', function () {
+	it('should have a name property set to "Bill Gates"', function () {
 		var $scope = {};
-		$controller('ContactController as vm', {$scope: $scope});
+		$controller('ContactController', {$scope: $scope});
 
-		expect($scope.name).toBe(undefined);
-		expect($scope.email).toBe(undefined);
+		expect($scope.name).toBe('Bill Gates');
 	});
-	it('should have values assigned to `this`', function () {
-		var $scope = {};
-		$controller('ContactController as vm', {$scope: $scope});
 
-		expect($scope.vm.name).toBe('Bill Gates');
-		expect($scope.vm.email).toBe('william@microsoft.com');
-	})
+	it('should have a title set to "Founder"', function () {
+		var $scope = {};
+		$controller('ContactController', {$scope: $scope});
+
+		expect($scope.title).toBe('Founder');
+	});
+
+	it('should have an email set to "bill@microsoft.com"', function () {
+		var $scope = {};
+		$controller('ContactController', {$scope: $scope});
+
+		expect($scope.email).toBe('bill@microsoft.com');
+	});
 });
