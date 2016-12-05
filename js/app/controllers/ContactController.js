@@ -1,7 +1,7 @@
 function ContactController($scope) {
     $scope.name = 'Bill Gates';
     $scope.email = 'bill@microsoft.com';
-    $scope.title = "Founder";
+    $scope.title = 'Founder';
 }
 
 angular
