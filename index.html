@@ -9,10 +9,10 @@
 <body>
 
     <div ng-app="app">
-        <div ng-controller="ContactController">
+        <div ng-controller="ContactController as contact">
             Hello, {{ name }}!
 
-            <div ng-controller="StaffController">
+            <div ng-controller="StaffController as staff">
                 Also hello to {{ name }}, best friends with {{ name }}!
             </div>
         </div>
